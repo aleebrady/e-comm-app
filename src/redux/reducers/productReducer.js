@@ -1,7 +1,7 @@
 import { ActionTypes } from "../constants/action-types"; // reducer always takes the initial state and action 
 
 const initialState = {
-    products = [
+    products: [
         {
             id: 1,
             title: "Knee Sleeves",
@@ -9,7 +9,7 @@ const initialState = {
         },
     ]
 }
-export const productReducer = (state, {type, payload}) => {
+export const productReducer = (state = initialState, {type, payload}) => {
     switch (type) {
         case ActionTypes.SET_PRODUCTS:
             return state
